@@ -1,0 +1,12 @@
+This is a program of server and a client
+where server builds a connection so that client may add into it
+When client gets connected then it sends a group of 5 strings and waits until 
+server sends the number of highest string(string id)
+client reads that string id, and again sends the 5 strings  corresponding to the next id of received id
+and this continues until last id get reached
+
+In unix domain socket: we build that connection using sockets, by using some functions like bind listen connect send recv etc.
+In FIFO: we build that connection using FIFO(named pipes), by using some functions like mkfifo read write etc.
+In shared memory: we build that connection using shared memory, by using some functions like bind listen connect etc.
+
+on average fastness of my programs: shared memory > unix domain socket > FIFO 
